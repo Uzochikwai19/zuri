@@ -1,24 +1,146 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box
 }
 body{
-    background-color: rgb(3, 3, 26);
-    display: flex;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(/images/bg-intro-mobile.png);
+    display: grid;
     place-items: center;
     min-height: 100vh;
-    color: white;
+    color: hsl(245, 86%, 97%);
     font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
 }
+h1{padding-top: 250px;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 2em;
+    line-height: 2ch;
+    text-align: left;
+}
+p {
+    font-size: 1.5rem;
+    line-height: 2.6ch;
+    text-align: left;
+  }
+  .text {
+    margin-bottom: 5rem;
+    align-items: flex-start;
+    justify-items: left;
+  }
 main{
-    display: flex;
-    flex-direction: row;
+    max-width: 1000px;
+    margin: 7.1rem 3rem;
+    display: grid;
 }
 .grid{
-    margin: auto;
-    display: grid;
-    grid-template-areas:,
-    gap: 10px;
-    border-radius: 10px;
-    width: 50%;
+    width: 130%;
 }
+
+.form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    box-shadow: 0px 7px 2px rgba(0, 0, 0, 0.367);
+    position: relative;
+  }
+  .form input {
+    padding: 1.5rem;
+    width: 100%;
+    border: 1px solid hsla(244, 9%, 36%, 0.514);
+    border-radius: 5px;
+  }
+  .error-image {
+    bottom: -40px;
+    content: url(/images/icon-error.svg);
+    display: inline;
+    position: relative;
+    right: -170px;
+    visibility: hidden;
+  }
+  
+  .error-message {
+    color: hsl(0, 100%, 74%);
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+    position: relative;
+    right: 12px;
+    text-align: right;
+    top: 8px;
+    visibility: hidden;
+  }
+  .error {
+    visibility: visible;
+  }
+  ::placeholder {
+    color:  hsl(249, 10%, 26%);
+    font-weight: 600;
+    outline: 0;
+  }
+  .info{
+    padding: 0 2.3rem;
+    color: hsl(242, 13%, 64%);
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .info b{
+    color: rgba(255, 0, 0, 0.503);
+  }
+  button {
+    font-size: 1.4rem;
+    border-radius: 10px;
+    border: 0;
+    color: inherit;
+    line-height: 2.6ch;
+    text-decoration: none;
+    width: 100%;
+    padding: 1.4rem 0;
+    cursor: pointer;
+  }
+.button {
+    background-color: hsl(248, 32%, 49%);
+    padding: 1.4rem 6rem;
+    box-shadow: 0px 7px 2px rgba(0, 0, 0, 0.367);
+}
+.button b {
+    color: white;
+}
+.button2{
+    background-color: hsl(154, 59%, 51%);
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+.button2:hover{
+    background-color: hsla(154, 59%, 51%, 0.626);
+}
+  @media screen and (min-width: 500px) {
+    body {
+      background-image: url(/images/bg-intro-desktop.png);
+    }
+  
+    main {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+    }
+  
+    h1 {
+      font-size: 3.5rem;
+      width: 400px;
+    }
+  
+    p {
+      font-size: 1.8rem;
+    }
+  
+    .text-content {
+      width: 450px;
+      text-align: left;
+      align-self: center;
+    }
+  }

@@ -9,31 +9,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="./images/favicon-32x32.png" />
 </head>
 <body>
     <main>
-        <div>
+        <div class="text">
             <h1>Learn to code by watching others</h1>
             <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div class="grid">
-            <p>Try it free 7 days then $20/mo, thereafter</p>
+            <button class="button"><b>Try it free 7 days</b> then $20/mo. thereafter</button>
             <form action=" " class="form">
-            <div>
-              <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
-            </div>
-            <div>
-              <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
-            </div>
-            <div>
-              <input type="email" id="email" placeholder="Email Address" required>
-            </div>
-            <div>
-              <input id="Password" type="password" name="password" placeholder="Password" required>
-            </div>
-            <div>
-              <input class="button2" type="submit" value="CLAIM YOUR FREE TRIAL">
-            </div>
+              <div class="error-image"></div>
+              <input id="first-name" type="text" placeholder="First Name" />
+              <div class="error-message">First Name cannot be empty</div>
+    
+              <div class="error-image"></div>
+              <input id="last-name" type="text" placeholder="Last Name" />
+              <div class="error-message">last Name cannot be empty</div>
+    
+              <div class="error-image"></div>
+              <input id="email" type="email" placeholder="Email Address" />
+              <div class="error-message">Not an Email</div>
+    
+              <div class="error-image"></div>
+              <input id="Password" type="password" name="password" minlength="4"
+              maxlength="20" placeholder="Password" required>
+              <div class="error-message">Password cannot be empty</div>
+            
+              <button class="button2" type="submit">CLAIM YOUR FREE TRIAL</button>
+              <p class="info">
+                By clicking the button, you are agreeing to our <b>Terms and Services</b>
+              </p>
           </form>
         </div>
     </main>
